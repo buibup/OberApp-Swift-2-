@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ober" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="8bC-Xf-vdC" id="Zbr-h6-aBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="298"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="ol2-wX-dK3">
+            <objects>
+                <viewController storyboardIdentifier="signUp" id="UM7-tV-7Bw" customClass="SignUpViewController" customModule="Ober" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EOf-Gg-tmW"/>
+                        <viewControllerLayoutGuide type="bottom" id="chp-sA-eCI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Cz-ue-2oW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XH4-6Q-brO">
+                                <rect key="frame" x="210" y="123" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CS7-8l-Uo0"/>
+                                    <constraint firstAttribute="width" constant="180" id="M3J-xs-Ydm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-KW-J6X">
+                                <rect key="frame" x="249" y="245" width="103" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1Sn-kR-UoC"/>
+                                    <constraint firstAttribute="width" constant="103" id="bye-Ov-uL1"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Rider"/>
+                                    <segment title="Driver"/>
+                                </segments>
+                                <connections>
+                                    <action selector="riderDriver:" destination="UM7-tV-7Bw" eventType="valueChanged" id="mIz-z1-iqS"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIH-Qx-gwQ">
+                                <rect key="frame" x="210" y="166" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jBT-Jx-UCw"/>
+                                    <constraint firstAttribute="width" constant="180" id="lFy-uD-iaQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XH4-6Q-brO" firstAttribute="centerX" secondItem="9Cz-ue-2oW" secondAttribute="centerX" id="DFJ-uH-ztm"/>
+                            <constraint firstItem="MTk-KW-J6X" firstAttribute="top" secondItem="bIH-Qx-gwQ" secondAttribute="bottom" constant="49" id="HjF-JV-zcr"/>
+                            <constraint firstItem="XH4-6Q-brO" firstAttribute="top" secondItem="EOf-Gg-tmW" secondAttribute="bottom" constant="59" id="Lo7-yt-m81"/>
+                            <constraint firstItem="MTk-KW-J6X" firstAttribute="centerX" secondItem="9Cz-ue-2oW" secondAttribute="centerX" id="Tv8-rz-8Pt"/>
+                            <constraint firstItem="bIH-Qx-gwQ" firstAttribute="top" secondItem="XH4-6Q-brO" secondAttribute="bottom" constant="13" id="dFI-0b-V3j"/>
+                            <constraint firstItem="bIH-Qx-gwQ" firstAttribute="centerX" secondItem="9Cz-ue-2oW" secondAttribute="centerX" id="iR4-GZ-hRl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="5U1-YW-6lt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="E8e-hg-GPK">
+                            <connections>
+                                <action selector="cancel:" destination="UM7-tV-7Bw" id="JLF-yP-793"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uvj-3y-3v5">
+                            <connections>
+                                <action selector="done:" destination="UM7-tV-7Bw" id="GZ0-2l-LW7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="password" destination="bIH-Qx-gwQ" id="ttU-iZ-7lt"/>
+                        <outlet property="riderDriverControl" destination="MTk-KW-J6X" id="ksg-ed-YlX"/>
+                        <outlet property="username" destination="XH4-6Q-brO" id="0EM-gn-D0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxP-xt-Pgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hUC-y0-uoJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jC0-Y8-7UY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MrL-5h-WSw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UM7-tV-7Bw" kind="relationship" relationship="rootViewController" id="5RN-vK-imp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybA-9Q-cL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="298"/>
+        </scene>
+    </scenes>
+</document>
